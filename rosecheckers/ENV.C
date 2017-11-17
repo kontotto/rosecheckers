@@ -319,6 +319,7 @@ bool ENV32_C(const SgNode *node) {
  * \note As written, these tests catch template declarations only if instantiated.
  */
 bool ENV33_C(const SgNode *node) {
+        /**
 	const SgFunctionRefExp *fnRef = isSgFunctionRefExp(node);
 	if (!fnRef)
 		return false;
@@ -337,6 +338,8 @@ bool ENV33_C(const SgNode *node) {
 
 	print_error(node, "ENV33-C", "Do not call system()", true);
 	return true;
+        */
+        return false;
 }
 
 bool ENV_C(const SgNode *node) {

@@ -143,7 +143,8 @@ bool INT01_C(const SgNode *node ) {
  * all possible inputs
  */
 bool INT05_C(const SgNode *node ) {
-	const SgFunctionRefExp *ref = isSgFunctionRefExp(node);
+	/*
+        const SgFunctionRefExp *ref = isSgFunctionRefExp(node);
 	if (ref == NULL) return false;
 	int numArg = getScanfFormatString(ref);
 	if (numArg == -1) return false;
@@ -161,6 +162,8 @@ bool INT05_C(const SgNode *node ) {
 	}
 
 	return false;
+        */
+        return false;
 }
 
 /**

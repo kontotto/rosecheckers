@@ -45,7 +45,7 @@
 ROSECHECKERS_CMD = ./rosecheckers
 
 # Location of include directory after "make install"
-ROSE_INCLUDE_DIR = $(ROSE)/include
+ROSE_INCLUDE_DIR = $(ROSE)/include/rose
 
 # Location of library directory after "make install"
 ROSE_LIB_DIR = $(ROSE)/lib
@@ -78,9 +78,9 @@ all: pgms # tests -- not done for Eclipse
 
 pgms: $(PGMS)
 $(PGMS): %: %.o $(OBJS)
-	libtool --mode=link g++ -Wall -g -o $@ -L$(ROSE)/lib $(ROSE_LIBS) $^
+	libtool --mode=link g++ -Wall -g -o $@ -L$(ROSE)/lib $(ROSE_LIBS) $^ -lboost_system
 %.o: %.C
-	libtool --mode=compile g++ -Wall -c -g -DHAVE_CONFIG_H -I$(ROSE_INCLUDE_DIR) -o $@ $<
+	libtool --mode=compile g++ -Wall -c -g -DHAVE_CONFIG_H -I$(ROSE_INCLUDE_DIR) -o $@ $< -lboost_system
 
 tests:	$(TESTS)
 
