@@ -42,7 +42,7 @@
 # You should have ROSE predefined to point to ROSE
 
 # Change this to your own installation of ROSE
-ROSECHECKERS_CMD = ./rosecheckers
+ROSECHECKERS_CMD = /usr/local/bin/rosecheckers
 
 # Location of include directory after "make install"
 ROSE_INCLUDE_DIR = $(ROSE)/include/rose
